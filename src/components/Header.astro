@@ -1,0 +1,63 @@
+---
+const links = [
+  { name: "Accueil", href: "/" },
+  { name: "Presentation", href: "/presentation" },
+  { name: "Formation", href: "/formation" },
+  { name: "Partenaire", href: "/partenaire" },
+  { name: "Contact", href: "/contact" },
+];
+---
+
+<header class="fixed top-0 left-0 w-full h-[200px] bg-base-200 shadow-md z-50">
+  <div class="container mx-auto h-full flex items-center justify-between px-6">
+    
+    <!-- Logo -->
+    <div class="flex items-center gap-4">
+      <img src="/logo.png" alt="Logo" class="h-28 w-auto" />
+    </div>
+
+    <!-- Liens -->
+    <nav class="flex-1 flex justify-center">
+      <ul class="menu menu-horizontal gap-6 text-lg font-semibold">
+        {links.map(link => (
+          <li><a href={link.href} class="hover:text-primary">{link.name}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Boutons réseaux sociaux -->
+    <div class="flex gap-4">
+      <!-- Facebook -->
+      <button
+        class="btn btn-outline btn-circle border-dashed border-neutral text-neutral hover:border-[#1877F2] hover:text-[#1877F2] transition-colors duration-300 hover:scale-110"
+        aria-label="Facebook"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-5 h-5 fill-current">
+          <path d="M279.14 288l14.22-92.66h-88.91V127.09c0-25.35 
+          12.42-50.06 52.24-50.06h40.42V6.26S293.06 0 262.02 
+          0c-73.11 0-121.09 44.38-121.09 124.72v70.62H86.41V288h54.52v224h100.2V288z"/>
+        </svg>
+      </button>
+
+      <!-- Instagram -->
+      <button
+        class="btn btn-outline btn-circle border-dashed border-neutral text-neutral hover:border-[#E4405F] hover:text-[#E4405F] transition-colors duration-300 hover:scale-110"
+        aria-label="Instagram"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current">
+          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 
+          114.9S160.5 370.8 224.1 370.8 339 
+          319.5 339 255.9 287.7 141 224.1 
+          141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 
+          74.7-74.7 74.7 33.5 74.7 74.7-33.6 
+          74.7-74.7 74.7zm146.4-194.3c0 
+          14.9-12 26.9-26.9 
+          26.9s-26.9-12-26.9-26.9 
+          12-26.9 26.9-26.9 
+          26.9 12 26.9 
+          26.9z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

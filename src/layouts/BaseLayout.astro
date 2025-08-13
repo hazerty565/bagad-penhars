@@ -1,0 +1,19 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>BAGAD PENHARS</title>
+  </head>
+  <body class="bg-base-100 text-base-content">
+    <Header />
+    <main class="pt-[200px]">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
